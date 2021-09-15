@@ -5,12 +5,27 @@
   <div id="root"></div>
   <script src="https://unpkg.com/react@17.0.0/umd/react.development.js"></script>
   <script src="https://unpkg.com/react-dom@17.0.0/umd/react-dom.development.js"></script>
+
+  <!-- Script tag for Babel added below to compile the JS code on the fly -->
   <script src="https://unpkg.com/@babel/standalone@7.12.4/babel.js"></script>
 
   <script type="text/babel">
-    const greeting = 'hello world...'
-    const classMe = 'test'
-    const element = <div className={classMe}>{greeting}</div>
+    const children = 'hello world...'
+    const className = 'test'
+
+    const props = {children, className}
+
+    // {} curly braces are entering JavaScript whilst writing JSX
+    // Not able to do statements inside the below
+
+    // const element = <div className={className}>{children}</div>
+
+    // Object spread, allows me to use the props from above.
+    // Order matters
+    const element = <div {...props} />
+
+    // The above prints out a div with the class name of 'test' and whatever greeting I wrote.
+
     ReactDOM.render(element, document.getElementById('root'))
   </script>
 </body>

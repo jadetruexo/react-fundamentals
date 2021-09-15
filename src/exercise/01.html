@@ -3,11 +3,14 @@
 
 <body>
   <script type="module">
+    // Removed HTML and created nodes displayed below.
+
     const createRoot = document.createElement('div')
     createRoot.setAttribute('id', 'root')
     document.body.append(createRoot)
 
     const divEl = document.createElement('div')
+
     divEl.textContent = 'Hello World'
     divEl.className = 'container'
     createRoot.append(divEl)
