@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "@kentcdodds/react-workshop-app": "^4.3.0",
+    "@testing-library/dom": "^8.6.0",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^13.1.9",
     "@types/react": "^17.0.11",
@@ -42,7 +43,7 @@
     "format": "prettier --write \"./src\"",
     "validate": "npm-run-all --parallel build test:coverage lint"
   },
- "jest": {
+  "jest": {
     "collectCoverageFrom": [
       "src/final/**/*.js"
     ]
